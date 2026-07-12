@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Coherent Capital — Business Growth Plan (2025–2026)</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --gold: #d4a94c;
+    --charcoal: #0b0b0b;
+    --page-width: 800px;
+    --gutter: 32px;
+  }
+  html,body{
+    height:100%;
+    margin:0;
+    background: #111;
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color:#111;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+
+  /* centered stage for screen view */
+  .stage{
+    display:flex;
+    justify-content:center;
+    padding:40px 12px;
+  }
+
+  /* page card */
+  .page {
+    width: var(--page-width);
+    background: white;
+    padding: 72px 64px 84px 64px;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    border: 1px solid rgba(0,0,0,0.06);
+    overflow: hidden;
+  }
+
+  /* slim creative border */
+  .page:before{
+    content:"";
+    position:absolute;
+    left:14px;
+    right:14px;
+    top:14px;
+    bottom:14px;
+    border: 2px solid rgba(212,169,76,0.95);
+    pointer-events:none;
+    border-radius:4px;
+    box-sizing:border-box;
+  }
+
+  header{
+    text-align:center;
+    margin-bottom: 18px;
+    position: relative;
+    z-index:2;
+  }
+
+  /* logo svg and fallback img */
+  .logo-wrap{
+    display:inline-block;
+    padding: 6px 0 14px 0;
+  }
+  .logo-svg{
+    width: 108px;
+    height: 108px;
+    display:block;
+    margin: 0 auto 8px auto;
+  }
+
+  h1.title{
+    margin:0;
+    font-weight:700;
+    letter-spacing:2px;
+    color:var(--charcoal);
+    font-size:20px;
+  }
+  .subtitle{
+    margin-top:6px;
+    font-size:12px;
+    color:#555;
+  }
+
+  /* content area */
+  .content{
+    margin-top: 14px;
+    color:#222;
+    font-size:13.5px;
+    line-height:1.54;
+    text-align:justify; /* justified text as requested */
+  }
+
+  .section-title{
+    font-weight:600;
+    margin: 16px 0 8px 0;
+    color: #111;
+  }
+
+  table.investors {
+    width:100%;
+    border-collapse:collapse;
+    margin-top:6px;
+    font-size:13px;
+  }
+  table.investors td, table.investors th{
+    padding:8px 6px;
+    vertical-align:top;
+    border-bottom:1px dashed rgba(0,0,0,0.06);
+  }
+  table.investors th{
+    text-align:left;
+    font-weight:600;
+    color:#111;
+  }
+
+  /* footer */
+  footer{
+    position: absolute;
+    left: 64px;
+    right: 64px;
+    bottom: 18px;
+    height: 48px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    z-index:3;
+    box-sizing:border-box;
+  }
+  .footer-left, .footer-center, .footer-right{
+    display:flex;
+    align-items:center;
+  }
+  .footer-left .small-logo{
+    width:36px;
+    height:36px;
+    display:block;
+  }
+  .footer-center{
+    justify-content:center;
+    flex:1;
+  }
+  .footer-center a{
+    text-decoration:none;
+    color:#222;
+    font-weight:600;
+    letter-spacing:0.6px;
+    font-size:13px;
+  }
+  .footer-right{
+    min-width:110px;
+    justify-content:flex-end;
+    color:#444;
+    font-size:13px;
+  }
+
+  /* print button for screen usage */
+  .actions{
+    display:flex;
+    justify-content:flex-end;
+    gap:8px;
+    margin-bottom:12px;
+  }
+  button.print-btn{
+    background:var(--gold);
+    color:#081;
+    border:0;
+    padding:10px 14px;
+    border-radius:6px;
+    font-weight:600;
+    cursor:pointer;
+    box-shadow:0 6px 14px rgba(0,0,0,0.2);
+  }
+
+  /* --- Print-specific styles --- */
+  @media print{
+    html,body{ background:white; }
+    .stage{ padding:0; }
+    .page{
+      box-shadow:none;
+      margin:0;
+      width:auto;
+      border-radius:0;
+      padding: 56px 48px 80px 48px;
+      page-break-after:always;
+    }
+    .page:before{ left:8px; right:8px; top:8px; bottom:8px; border-width:1px; }
+    button.print-btn, .actions{ display:none; }
+    footer{ position:fixed; bottom:12px; left:48px; right:48px; }
+
+    /* page numbering — modern browsers */
+    @page {
+      margin: 18mm;
+      size: A4;
+    }
+    .footer-right:after{
+      content: "Page " counter(page) " of " counter(pages);
+      /* some browsers may not support counter(pages); at minimum counter(page) prints */
+      font-weight:600;
+      color:#333;
+    }
+  }
+
+  /* small adjustments for smaller screens */
+  @media (max-width:900px){
+    .page{ width:640px; padding:48px 36px 76px 36px; }
+  }
+  @media (max-width:700px){
+    .page{ width:92%; padding:28px; }
+    footer{ left:28px; right:28px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="stage">
+  <div class="page" id="doc">
+    <div class="actions" aria-hidden="true">
+      <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+    </div>
+
+    <header>
+      <div class="logo-wrap">
+
+        <!-- If you'd rather use your exact image, uncomment the <img> and provide a data URL or file path -->
+         <img id="logo-img" src="coherent_logo.png" alt="Coherent Capital logo" style="width:108px;height:108px;display:block;margin:0 auto 8px auto;" /> -->
+
+      </div>
+
+      <h1 class="title">COHERENT CAPITAL</h1>
+      <div class="subtitle">Business Growth Plan — 2025–2026</div>
+    </header>
+
+    <main class="content" role="main">
+      <p style="margin-top:8px;"><strong>Next Review Date:</strong> __________________________</p>
+
+      <p class="section-title">1. Description of Expansion Opportunities</p>
+      <p>Coherent Capital will expand its digital services by integrating targeted AI tools for social media content creation and scheduling, automated code assistance for web development, SEO optimisation workflows, and streamlined UI/UX design systems. This reduces the load on the sole developer, accelerates delivery times, and improves overall service quality and client satisfaction. Improved tooling will enable the business to accept more projects, increase recurring contract opportunities, and provide higher-margin packages.</p>
+
+      <p class="section-title">2. Financial &amp; Revenue Goals</p>
+      <p>The target for Q1–Q3 2026 is a consistent monthly revenue of <strong>R35,000</strong>. This will cover essential operating costs (AI subscriptions, minor wages), and allow reinvestment to grow equity. Current operations are sustained from personal savings for approximately nine months, while several client projects are expected to generate cash inflow within the next two months. Priority will be given to higher-margin and faster-paying contracts to stabilise cash flow.</p>
+
+      <p class="section-title">3. Market Share &amp; Penetration Plan</p>
+      <p>Focus on differentiating through creativity, personalised service and competitive pricing. Implement an AI-driven content and SEO programme to increase lead flow from organic search and social platforms. Produce short case studies and client testimonials to convert prospects into recurring clients. Offer bundled service packages (website + SEO + social setup) at attractive entry prices to grow market share.</p>
+
+      <p class="section-title">4. Recovering Losses &amp; Financial Stability Strategy</p>
+      <p>Adopt a staged investment approach: purchase essential AI subscriptions with the highest ROI first (e.g. SEO automation, code-assist tools). Tighten project selection to prioritise short payment cycles. Improve operational efficiency through automation, standardised templates, and clear scope definitions to avoid scope creep and cost overruns.</p>
+
+      <p class="section-title">5. Future Risks &amp; Mitigation Strategy</p>
+      <p><strong>Key risks:</strong> limited funding, resource constraints (hardware, single developer), and relative lack of in-house AI expertise. <strong>Mitigations:</strong> start with low-cost/free AI tools and training resources; document processes to reduce single-point dependence; build a small network of trusted contractors to scale capacity as needed; maintain a conservative cash buffer covering at least one month of costs beyond the nine months of current savings.</p>
+
+      <p class="section-title">6. Potential Investors &amp; Funding Approach</p>
+
+      <table class="investors" aria-label="Potential investors">
+        <tr>
+          <th style="width:28%;">Investor / Network</th>
+          <th style="width:36%;">Focus</th>
+          <th style="width:36%;">Why it fits</th>
+        </tr>
+        <tr>
+          <td>Jozi Angels</td>
+          <td>Angel investors — early seed cheques for tech / digital services</td>
+          <td>Good match for seed funding to buy tools and upgrade hardware; relatively quick decision cycles for small cheques.</td>
+        </tr>
+        <tr>
+          <td>4Di Capital</td>
+          <td>Early-stage tech & software ventures</td>
+          <td>Local VC experienced in scaling tech companies; suitable once recurring revenue is demonstrated.</td>
+        </tr>
+        <tr>
+          <td>Kalon Venture Partners</td>
+          <td>Growth-stage technology and disruptive SaaS</td>
+          <td>Potential partner when Coherent Capital demonstrates productised services and repeatable revenue.</td>
+        </tr>
+        <tr>
+          <td>Newtown Partners / HAVAÍC</td>
+          <td>Seed to growth-stage tech investments</td>
+          <td>Relevant for scalable digital businesses seeking structured growth capital.</td>
+        </tr>
+        <tr>
+          <td>Public / Grant Options</td>
+          <td>TIA / SA SME Fund + seed fund partners</td>
+          <td>Non-equity financing or matched grant opportunities for innovation-led SMEs (subject to eligibility).</td>
+        </tr>
+      </table>
+
+      <p style="margin-top:10px;"><strong>Suggested funding steps:</strong> prepare a concise 6-slide investor deck (problem, solution, traction, financials, plan, ask). Approach angel networks for a small seed tranche to cover AI tools + a modest hardware upgrade. Once R35K/month consistency is shown, target growth VCs for a larger tranche to scale operations and marketing.</p>
+
+      <p style="margin-top:14px;"><strong>Quick operational checklist (next 90 days):</strong></p>
+      <ul style="margin-top:6px;">
+        <li>Purchase 1–2 high ROI AI tools (SEO automation + code assistant).</li>
+        <li>Standardise a 3-page service package for easy sales conversion.</li>
+        <li>Publish 2 short case studies and optimise website contact funnels.</li>
+        <li>Prepare a concise investor one-pager and 6-slide deck.</li>
+      </ul>
+
+    </main>
+
+    <footer>
+
+      <div class="footer-right">
+        <!-- page number inserted for print by CSS counter if supported -->
+        
+      </div>
+    </footer>
+
+  </div>
+</div>
+
+<script>
+  // Optional: If you have an actual image data URL or hosted URL,
+  // you can set it here to replace the svg logo:
+  // Example:
+  // document.getElementById('logo-img').src = 'data:image/png;base64,....';
+
+  // Helpful print hint for users on screen:
+  console.log("Open Print dialog (Ctrl+P / Cmd+P) and select 'Save as PDF' to export this document.");
+</script>
+
+</body>
+</html>

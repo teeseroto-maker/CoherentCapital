@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E61PRZRFQR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-E61PRZRFQR');
+  </script>
+  
+  <!-- SEO Meta Tags -->
+  <title>About Coherent Capital | Business Analysis & Financial Solutions</title>
+  <meta name="description" content="Coherent Capital provides business analysis, development, and financial mentoring to help businesses achieve success in the information age.">
+  <meta name="keywords" content="business analysis, financial solutions, capital generation, business development, financial mentoring">
+  <meta name="author" content="Coherent Capital">
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="About Coherent Capital | Business Analysis & Financial Solutions">
+  <meta property="og:description" content="Coherent Capital provides business analysis, development, and financial mentoring to help businesses achieve success.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.coherentcapital.com/about.html">
+  <meta property="og:image" content="https://www.coherentcapital.com/images/og-image.jpg">
+  <meta property="og:site_name" content="Coherent Capital">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Coherent Capital | Business Analysis & Financial Solutions">
+  <meta name="twitter:description" content="Coherent Capital provides business analysis, development, and financial mentoring to help businesses achieve success.">
+  <meta name="twitter:image" content="https://www.coherentcapital.com/images/twitter-image.jpg">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.coherentcapital.com/about.html">
+  
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Preconnect to external domains for performance -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  
+  <style>
+    /* --- Your original styles remain unchanged --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0a0a0a;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    header img {
+      height: 40px;
+    }
+
+    .hamburger-menu {
+      position: relative;
+    }
+
+    .hamburger-btn {
+      background: none;
+      border: none;
+      color: #d4af37;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.3s;
+    }
+
+    .hamburger-btn:hover {
+      color: #e6c34e;
+    }
+
+    .nav-menu {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: rgba(0, 0, 0, 0.95);
+      min-width: 200px;
+      border-radius: 0 0 5px 5px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      display: none;
+      flex-direction: column;
+      padding: 10px 0;
+    }
+
+    .nav-menu.active {
+      display: flex;
+    }
+
+    .nav-menu a {
+      color: #d4af37;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-weight: bold;
+      transition: all 0.3s;
+      display: block;
+    }
+
+    .nav-menu a:hover {
+      color: #e6c34e;
+      background: rgba(212, 175, 55, 0.1);
+    }
+
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      padding-top: 120px;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #d4af37;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #d4af37;
+      color: #000;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 1rem;
+      transition: background 0.3s;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #e6c34e;
+      color: #000;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+      text-align: center;
+      max-width: 1200px;
+      margin: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.6);
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease-out;
+      margin-bottom: 3rem;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .section-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: #d4af37;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-text h2::after {
+      content: "";
+      display: block;
+      width: 60%;
+      height: 3px;
+      background: #d4af37;
+      margin: 0.5rem auto 0;
+      border-radius: 2px;
+    }
+
+    .section-text p {
+      font-size: 1.1rem;
+      color: #ddd;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-text .highlight {
+      color: #d4af37;
+      font-weight: bold;
+    }
+
+    .section-img img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      opacity: 0;
+      transform: translateX(50px);
+      transition: all 1s ease-out;
+    }
+
+    .section.visible .section-img img {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    @media (max-width: 768px) {
+      .section-container {
+        grid-template-columns: 1fr;
+      }
+
+      .section-text h2 {
+        font-size: 2rem;
+      }
+
+      .section-img img {
+        transform: translateY(30px);
+      }
+
+      .section.visible .section-img img {
+        transform: translateY(0);
+      }
+    }
+
+    .contact {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: #111;
+    }
+
+    .contact-info {
+      margin-bottom: 2rem;
+    }
+
+    .contact-info p {
+      margin: 1rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .contact-info a {
+      color: #d4af37;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .contact-info a:hover {
+      color: #e6c34e;
+    }
+
+    .contact-info i {
+      color: #d4af37;
+      width: 20px;
+    }
+
+    .contact form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact input,
+    .contact textarea {
+      padding: 10px;
+      border: 1px solid #333;
+      border-radius: 5px;
+      background: #222;
+      color: #fff;
+    }
+
+    .contact input:focus,
+    .contact textarea:focus {
+      outline: none;
+      border-color: #d4af37;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid #1e3a5c;
+      font-size: 0.9rem;
+      color: #8a9cb2;
+      background: #000;
+    }
+
+    footer a {
+      color: #d4af37;
+      text-decoration: none;
+      margin: 0 8px;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: #e6c34e;
+      text-decoration: underline;
+    }
+
+    .footer-social {
+      margin-top: 0.75rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-social a {
+      color: #d4af37;
+      font-size: 1.3rem;
+      transition: color 0.3s, transform 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+
+    .footer-social a:hover {
+      color: #e6c34e;
+      transform: scale(1.08);
+      text-decoration: none;
+    }
+
+    .footer-social .social-label {
+      font-size: 0.85rem;
+      font-weight: normal;
+    }
+
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #d4af37;
+      color: #000;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      z-index: 1001;
+    }
+
+    #backToTop:hover {
+      background: #e6c34e;
+    }
+
+    #backToTop.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* WhatsApp Floating Button - Bottom Left */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      background: #25D366;
+      color: #fff;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      box-shadow: 0 0 15px rgba(0,0,0,0.6);
+      z-index: 1000;
+      text-decoration: none;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      background: #20b85f;
+      transform: scale(1.08);
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+        bottom: 20px;
+        left: 20px;
+      }
+      .footer-social a {
+        font-size: 1.1rem;
+      }
+      .footer-social .social-label {
+        font-size: 0.75rem;
+      }
+    }
+
+    /* NEW: Enable smooth scrolling for the whole page */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .section, .section-img img {
+        transition: none;
+        transform: none;
+        opacity: 1;
+      }
+      /* NEW: Respect reduced motion preference */
+      html {
+        scroll-behavior: auto;
+      }
+    }
+    
+    /* NEW: Schema.org structured data styling (hidden) */
+    .structured-data {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="logo.jpg" alt="Coherent Capital Logo - Business Analysis and Financial Solutions" />
+    <div class="hamburger-menu">
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="https://teeseroto-maker.github.io/DollarNotes/index.html#" target="_blank">Dollar Notes</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" role="banner" aria-label="About Coherent Capital">
+    <div class="hero-content">
+      <h1>About Coherent Capital</h1>
+      <p>Connecting businesses to their vision with intelligent digital solutions</p>
+    </div>
+  </section>
+
+  <!-- Who We Are -->
+  <section id="who-we-are" class="section" aria-labelledby="who-we-are-heading">
+    <div class="section-container">
+      <div class="section-text">
+        <h2 id="who-we-are-heading">Who We Are</h2>
+        <p>
+          We are the link that every business looks for to connect it to its overall vision. We have gained the necessary skills to be able to provide any business what it needs to achieve its overall success.
+        </p>
+        <p>
+          We are a business that aims to help all businesses integrate into the information age successfully.
+        </p>
+      </div>
+      <div class="section-img">
+        <img src="WWA.png" alt="Coherent Capital - A Life. A Purpose. A Plan. Daily routine for success: Meditate, Prepare, Train, Execute, Evaluate, Repeat." />
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Do -->
+  <section id="what-we-do" class="section" aria-labelledby="what-we-do-heading">
+    <div class="section-container">
+      <div class="section-img">
+        <img src="WWD.png" alt="Coherent Capital - We build the foundation for lasting wealth. Business Analysis, Social Media Management, Financial Markets Mentoring." />
+      </div>
+      <div class="section-text">
+        <h2 id="what-we-do-heading">What We Do</h2>
+        <p>
+          We offer Business analysis and Development. All businesses must be able to understand what field their business competes in and find a competitive advantage that sets them apart from others within the same to succeed long term.
+        </p>
+        <p>
+          We provide mentoring in financial markets to help any business have the skills to be its own capital generator, eliminating the need to seek capital from external sources.
+        </p>
+        <a href="services.html" class="btn">Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact" aria-labelledby="contact-heading">
+    <h2 id="contact-heading">Contact Us</h2>
+    <div class="contact-info">
+      <p>
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+        <a href="mailto:info@coherentcapital.com">support@coherentcapital.com</a>
+      </p>
+      <p>
+        <i class="fas fa-phone" aria-hidden="true"></i>
+        <a href="tel:+27615289378">+27 61 528 9378</a>
+      </p>
+    </div>
+
+    <!-- Working form that will redirect via PHP -->
+    <form action="send-mail.php" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name" />
+      <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email" />
+      <textarea name="message" rows="5" placeholder="Your Message" required aria-label="Your Message"></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <p>&copy; 2025 Coherent Capital. All Rights Reserved.</p>
+    <p>
+      <a href="index.html">Home</a> | 
+      <a href="about.html">About</a> | 
+      <a href="services.html">Services</a> | 
+      <a href="#contact">Contact</a>
+    </p>
+    <!-- Social Icons -->
+    <div class="footer-social">
+      <a href="https://www.tiktok.com/@coherentcapital1" target="_blank" aria-label="TikTok">
+        <i class="fab fa-tiktok"></i>
+        <span class="social-label">@coherentcapital1</span>
+      </a>
+      <a href="https://www.instagram.com/johncoherent" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+        <span class="social-label">@johncoherent</span>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to Top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- WhatsApp Floating Button - Bottom Left -->
+  <a href="https://wa.me/27670929982" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json" class="structured-data">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Coherent Capital",
+    "description": "Coherent Capital provides business analysis, development, and financial mentoring to help businesses achieve success in the information age.",
+    "url": "https://www.coherentcapital.com",
+    "logo": "https://www.coherentcapital.com/logo.jpg",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+27-67-092-9982",
+      "contactType": "customer service",
+      "email": "support@coherentcapital.com",
+      "areaServed": "ZA",
+      "availableLanguage": "English"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/coherent-capital",
+      "https://twitter.com/coherentcapital"
+    ]
+  }
+  </script>
+
+  <script>
+    // Google Analytics Event Tracking
+    function trackEvent(category, action, label) {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', action, {
+          'event_category': category,
+          'event_label': label
+        });
+      }
+    }
+
+    // Hamburger menu functionality
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navMenu = document.getElementById('navMenu');
+    
+    hamburgerBtn.addEventListener('click', function() {
+      navMenu.classList.toggle('active');
+      trackEvent('Navigation', 'menu_toggle', navMenu.classList.contains('active') ? 'menu_open' : 'menu_close');
+      
+      const icon = hamburgerBtn.querySelector('i');
+      if (navMenu.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+    
+    document.addEventListener('click', function(event) {
+      const isClickInside = hamburgerBtn.contains(event.target) || navMenu.contains(event.target);
+      if (!isClickInside && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        const icon = hamburgerBtn.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+    
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        trackEvent('Navigation', 'menu_link_click', this.getAttribute('href'));
+        navMenu.classList.remove('active');
+        const icon = hamburgerBtn.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const sections = document.querySelectorAll('.section');
+      const backToTop = document.getElementById('backToTop');
+      
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+        return (
+          rect.top <= windowHeight * 0.85 &&
+          rect.bottom >= windowHeight * 0.15
+        );
+      }
+      
+      function handleSectionScroll() {
+        sections.forEach(section => {
+          if (isInViewport(section)) {
+            if (!section.classList.contains('visible')) {
+              section.classList.add('visible');
+              trackEvent('Engagement', 'section_view', section.id);
+            }
+          }
+        });
+      }
+
+      function handleBackToTop() {
+        if (window.scrollY > 300) {
+          backToTop.classList.add('show');
+        } else {
+          backToTop.classList.remove('show');
+        }
+      }
+      
+      function handleScroll() {
+        handleSectionScroll();
+        handleBackToTop();
+      }
+      
+      handleScroll();
+      
+      let ticking = false;
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(function() {
+            handleScroll();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+
+      backToTop.addEventListener('click', () => {
+        trackEvent('Navigation', 'back_to_top', 'click');
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+
+      // Form submission tracking
+      const contactForm = document.querySelector('.contact form');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          trackEvent('Conversion', 'form_submit', 'contact_form');
+          
+          const submitButton = this.querySelector('button[type="submit"]');
+          const originalText = submitButton.textContent;
+          
+          // Visual feedback
+          submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+          submitButton.disabled = true;
+          
+          // Revert after 3 seconds for demo (remove in production)
+          setTimeout(() => {
+            submitButton.textContent = originalText;
+            submitButton.disabled = false;
+          }, 3000);
+        });
+      }
+
+      // Service button tracking
+      const serviceBtn = document.querySelector('a.btn[href="services.html"]');
+      if (serviceBtn) {
+        serviceBtn.addEventListener('click', function() {
+          trackEvent('Conversion', 'service_button_click', 'about_page');
+        });
+      }
+
+      // Track page view
+      trackEvent('Page', 'view', 'about_page');
+    });
+  </script>
+
+</body>
+</html>

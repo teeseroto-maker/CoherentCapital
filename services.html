@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services - Coherent Capital</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Coherent Capital provides comprehensive business analysis, development services, and financial markets mentoring to drive sustainable business growth and financial success." />
+  <meta name="keywords" content="business analysis, financial mentoring, trading education, portfolio management, web development, social media management, business strategy" />
+  <meta name="author" content="Coherent Capital" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Our Services - Coherent Capital" />
+  <meta property="og:description" content="Comprehensive business solutions and financial mentoring services to drive your growth and success." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.coherentcapital.com/services.html" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=1200&q=80" />
+  <meta property="og:site_name" content="Coherent Capital" />
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Our Services - Coherent Capital" />
+  <meta name="twitter:description" content="Comprehensive business solutions and financial mentoring services." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=1200&q=80" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.coherentcapital.com/services.html" />
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E61PRZRFQR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-E61PRZRFQR');
+  </script>
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0a0a0a;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    header img {
+      height: 40px;
+    }
+
+    /* Hamburger Menu Styles */
+    .hamburger-menu {
+      position: relative;
+    }
+
+    .hamburger-btn {
+      background: none;
+      border: none;
+      color: #d4af37;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.3s;
+    }
+
+    .hamburger-btn:hover {
+      color: #e6c34e;
+    }
+
+    .nav-menu {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: rgba(0, 0, 0, 0.95);
+      min-width: 200px;
+      border-radius: 0 0 5px 5px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      display: none;
+      flex-direction: column;
+      padding: 10px 0;
+    }
+
+    .nav-menu.active {
+      display: flex;
+    }
+
+    .nav-menu a {
+      color: #d4af37;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-weight: bold;
+      transition: all 0.3s;
+      display: block;
+    }
+
+    .nav-menu a:hover {
+      color: #e6c34e;
+      background: rgba(212, 175, 55, 0.1);
+    }
+
+    /* Hero */
+    .hero {
+      height: 70vh;
+      background: url('https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      padding-top: 120px;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #d4af37;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #d4af37;
+      color: #000;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 1rem;
+      transition: background 0.3s;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #e6c34e;
+      color: #000;
+    }
+
+    .btn-sm {
+      padding: 6px 16px;
+      font-size: 0.85rem;
+      margin-top: 0.75rem;
+    }
+
+    /* Service Sections */
+    .service-section {
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+      text-align: center;
+      max-width: 1200px;
+      margin: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.6);
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease-out;
+      margin-bottom: 2rem;
+    }
+
+    .service-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .service-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: #d4af37;
+      position: relative;
+      display: inline-block;
+    }
+
+    .service-section h2::after {
+      content: "";
+      display: block;
+      width: 60%;
+      height: 3px;
+      background: #d4af37;
+      margin: 0.5rem auto 0;
+      border-radius: 2px;
+    }
+
+    .service-section p {
+      font-size: 1.1rem;
+      color: #ddd;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-section .highlight {
+      color: #d4af37;
+      font-weight: bold;
+    }
+
+    .service-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .service-item {
+      background: #111;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease-out;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-item.animated {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .service-item-img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .service-item .btn {
+      align-self: center;
+    }
+
+    /* Contact */
+    .contact {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: #111;
+    }
+
+    .contact-info {
+      margin-bottom: 2rem;
+    }
+
+    .contact-info p {
+      margin: 1rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .contact-info a {
+      color: #d4af37;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .contact-info a:hover {
+      color: #e6c34e;
+    }
+
+    .contact-info i {
+      color: #d4af37;
+      width: 20px;
+    }
+
+    .contact form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact input,
+    .contact textarea {
+      padding: 10px;
+      border: 1px solid #333;
+      border-radius: 5px;
+      background: #222;
+      color: #fff;
+    }
+
+    .contact input:focus,
+    .contact textarea:focus {
+      outline: none;
+      border-color: #d4af37;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid #1e3a5c;
+      font-size: 0.9rem;
+      color: #8a9cb2;
+      background: #000;
+    }
+
+    footer a {
+      color: #d4af37;
+      text-decoration: none;
+      margin: 0 8px;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: #e6c34e;
+      text-decoration: underline;
+    }
+
+    .footer-social {
+      margin-top: 0.75rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-social a {
+      color: #d4af37;
+      font-size: 1.3rem;
+      transition: color 0.3s, transform 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+
+    .footer-social a:hover {
+      color: #e6c34e;
+      transform: scale(1.08);
+      text-decoration: none;
+    }
+
+    .footer-social .social-label {
+      font-size: 0.85rem;
+      font-weight: normal;
+    }
+
+    /* Back to Top Button */
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #d4af37;
+      color: #000;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      z-index: 1001;
+    }
+
+    #backToTop:hover {
+      background: #e6c34e;
+    }
+
+    #backToTop.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* WhatsApp Floating Button - Bottom Left */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      background: #25D366;
+      color: #fff;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      box-shadow: 0 0 15px rgba(0,0,0,0.6);
+      z-index: 1000;
+      text-decoration: none;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      background: #20b85f;
+      transform: scale(1.08);
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+        bottom: 20px;
+        left: 20px;
+      }
+      .footer-social a {
+        font-size: 1.1rem;
+      }
+      .footer-social .social-label {
+        font-size: 0.75rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .service-section, .service-item {
+        transition: none;
+        transform: none;
+        opacity: 1;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .service-section h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="logo.jpg" alt="Coherent Capital - Business Analysis and Financial Mentoring Services" />
+    <div class="hamburger-menu">
+      <button class="hamburger-btn" id="hamburgerBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="https://teeseroto-maker.github.io/DollarNotes/index.html#" target="_blank">Dollar Notes</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Our Services</h1>
+      <p>Comprehensive solutions to drive your business growth and financial success</p>
+      <a href="#contact" class="btn">Get In Touch</a>
+    </div>
+  </section>
+
+  <!-- Business Analysis and Development -->
+  <section id="business-analysis" class="service-section">
+    <h2>Business Analysis and Development</h2>
+    <p>
+      Business analysis is the practice of enabling change in an enterprise by defining needs and recommending solutions that deliver value to stakeholders. It is essential for organizations to understand their current state, identify business needs, and determine solutions to business problems. Through thorough analysis, we help businesses optimize processes, improve efficiency, and align technology solutions with strategic goals, ensuring sustainable growth and competitive advantage.
+    </p>
+    <div class="service-items">
+      <div class="service-item">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80" alt="Web Development" class="service-item-img" />
+        <h3>Web Development</h3>
+        <p>Custom websites and web applications designed to enhance your digital presence and drive business growth.</p>
+      </div>
+      <div class="service-item">
+        <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=500&q=80" alt="Social Media Management" class="service-item-img" />
+        <h3>Social Media Management</h3>
+        <p>Strategic social media campaigns to build brand awareness and engage with your target audience effectively.</p>
+      </div>
+      <div class="service-item">
+        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=500&q=80" alt="Business Strategy" class="service-item-img" />
+        <h3>Business Strategy</h3>
+        <p>Comprehensive business analysis to identify opportunities and develop strategies for sustainable growth.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Financial Markets Mentoring -->
+  <section id="financial-mentoring" class="service-section">
+    <h2>Financial Markets Mentoring</h2>
+    <p>
+      Trading in financial markets involves the buying and selling of financial instruments such as stocks, bonds, currencies, and commodities with the goal of generating profits. It requires understanding market dynamics, analyzing economic indicators, and making informed decisions based on both technical and fundamental analysis. Successful trading demands discipline, risk management, and the ability to adapt to constantly changing market conditions.
+    </p>
+    <p>
+      The financial markets offer opportunities for wealth creation but also carry significant risks. Navigating these complexities requires knowledge, experience, and emotional control. Our mentoring program is designed to equip traders with the skills and mindset needed to succeed in these dynamic environments, whether they are beginners looking to understand the basics or experienced traders seeking to refine their strategies.
+    </p>
+    <p>
+      Mentoring in financial markets is invaluable because it provides personalized guidance, accelerates the learning curve, and helps traders avoid common pitfalls. Our experienced mentors share practical insights, proven strategies, and real-world experiences that go beyond theoretical knowledge. This one-on-one approach ensures that each trader receives tailored advice that aligns with their specific goals, risk tolerance, and trading style, significantly improving their chances of long-term success.
+    </p>
+    <div class="service-items">
+      <div class="service-item">
+        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=500&q=80" alt="Beginner Trading" class="service-item-img" />
+        <h3>Beginner Trading</h3>
+        <p>Foundational knowledge and skills to start your trading journey with confidence and proper risk management.</p>
+        <a href="Coherent_Capital_Apex_Capital_Extractor_260712_151541.pdf" download class="btn btn-sm">Free Guide</a>
+      </div>
+      <div class="service-item">
+        <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=500&q=80" alt="Advanced Strategies" class="service-item-img" />
+        <h3>Advanced Strategies</h3>
+        <p>Sophisticated trading techniques and risk management approaches for experienced market participants.</p>
+      </div>
+      <div class="service-item">
+        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=500&q=80" alt="USD Index Analysis" class="service-item-img" />
+        <h3>USD Index Analysis</h3>
+        <p>In-depth analysis of the US Dollar Index (DXY) with actionable insights for forex traders and investors. Stay ahead of market movements with our expert perspectives.</p>
+        <a href="https://teeseroto-maker.github.io/DollarNotes/index.html#" target="_blank" class="btn btn-sm">Dollar Notes</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <p>
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:support@coherentcapital.com">support@coherentcapital.com</a>
+      </p>
+      <p>
+        <i class="fas fa-phone"></i>
+        <a href="tel:+27615289378">+27 61 528 9378</a>
+      </p>
+    </div>
+
+    <form action="send-mail.php" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Coherent Capital. All Rights Reserved.</p>
+    <p>
+      <a href="index.html">Home</a> | 
+      <a href="about.html">About</a> | 
+      <a href="services.html">Services</a> | 
+      <a href="#contact">Contact</a>
+    </p>
+    <!-- Social Icons -->
+    <div class="footer-social">
+      <a href="https://www.tiktok.com/@coherentcapital1" target="_blank" aria-label="TikTok">
+        <i class="fab fa-tiktok"></i>
+        <span class="social-label">@coherentcapital1</span>
+      </a>
+      <a href="https://www.instagram.com/johncoherent" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+        <span class="social-label">@johncoherent</span>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- WhatsApp Floating Button - Bottom Left -->
+  <a href="https://wa.me/27670929982" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Coherent Capital",
+    "description": "Business analysis, development services, and financial markets mentoring",
+    "url": "https://www.coherentcapital.com",
+    "logo": "https://www.coherentcapital.com/logo.jpg",
+    "telephone": "+27816193004",
+    "email": "support@coherentcapital.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "South Africa"
+    },
+    "serviceType": [
+      "Business Consulting",
+      "Financial Advisory",
+      "Trading Education"
+    ],
+    "areaServed": "Global"
+  }
+  </script>
+
+  <script>
+    // Hamburger menu functionality
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navMenu = document.getElementById('navMenu');
+    
+    hamburgerBtn.addEventListener('click', function() {
+      navMenu.classList.toggle('active');
+      
+      // Toggle between hamburger and close icon
+      const icon = hamburgerBtn.querySelector('i');
+      if (navMenu.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const isClickInside = hamburgerBtn.contains(event.target) || navMenu.contains(event.target);
+      
+      if (!isClickInside && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        const icon = hamburgerBtn.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+    
+    // Close menu when clicking on a link
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        navMenu.classList.remove('active');
+        const icon = hamburgerBtn.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      });
+    });
+
+    // Scroll animations
+    document.addEventListener('DOMContentLoaded', function() {
+      const serviceSections = document.querySelectorAll('.service-section');
+      const serviceItems = document.querySelectorAll('.service-item');
+      const backToTop = document.getElementById('backToTop');
+      
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+        return (
+          rect.top <= windowHeight * 0.85 &&
+          rect.bottom >= windowHeight * 0.15
+        );
+      }
+      
+      function handleSectionScroll() {
+        serviceSections.forEach(section => {
+          if (isInViewport(section)) {
+            section.classList.add('visible');
+          }
+        });
+      }
+      
+      function handleItemScroll() {
+        serviceItems.forEach((item, index) => {
+          if (isInViewport(item)) {
+            setTimeout(() => {
+              item.classList.add('animated');
+            }, index * 200);
+          }
+        });
+      }
+
+      function handleBackToTop() {
+        if (window.scrollY > 300) {
+          backToTop.classList.add('show');
+        } else {
+          backToTop.classList.remove('show');
+        }
+      }
+      
+      function handleScroll() {
+        handleSectionScroll();
+        handleItemScroll();
+        handleBackToTop();
+      }
+      
+      handleScroll();
+      
+      let ticking = false;
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(function() {
+            handleScroll();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+
+      // Back to Top click
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
