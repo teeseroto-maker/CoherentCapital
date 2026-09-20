@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio | John, Coherent Capital</title>
+<meta name="description" content="Websites, apps and branded documents by John, founder of Coherent Capital.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #000000;
+    --coal: #0d0c0a;
+    --bone: #eee7d7;
+    --muted: #a8a08e;
+    --gold: #c9a24b;
+    --gold-deep: #8a6c2b;
+    --display: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+    --body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--black);
+    color: var(--bone);
+    font-family: var(--body);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+
+  .wrap { width: min(1080px, 100% - 2.5rem); margin-inline: auto; }
+
+  /* Top bar */
+  .bar { padding: 1.5rem 0; }
+  .bar .wrap { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+  .brand { font-family: var(--display); font-size: 1.15rem; letter-spacing: .02em; text-decoration: none; color: var(--gold); }
+  .bar nav { display: flex; gap: 1.5rem; font-size: .95rem; color: var(--muted); }
+  .bar nav a { text-decoration: none; }
+  .bar nav a:hover { color: var(--gold); }
+
+  /* Hero */
+  .hero { padding: clamp(3.5rem, 11vw, 8rem) 0 clamp(3rem, 8vw, 6rem); }
+  .hero h1 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(2.4rem, 7.4vw, 5.6rem);
+    line-height: 1.04;
+    letter-spacing: -.015em;
+    max-width: 15ch;
+  }
+  .hero .rule {
+    height: 2px; background: var(--gold);
+    width: 0; margin: clamp(1.75rem, 4vw, 2.75rem) 0;
+    animation: draw 1.4s .25s cubic-bezier(.2,.7,.2,1) forwards;
+  }
+  @keyframes draw { to { width: min(320px, 60%); } }
+  .hero p { max-width: 46ch; color: var(--muted); font-size: 1.15rem; }
+  .hero p strong { color: var(--bone); font-weight: 500; }
+
+  /* Section heads */
+  section { padding: clamp(3rem, 7vw, 5.5rem) 0; }
+  h2 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(1.8rem, 4.2vw, 2.9rem);
+    line-height: 1.1;
+    margin-bottom: 2.25rem;
+  }
+
+  /* Work index */
+  .work { border-top: 1px solid var(--gold-deep); }
+  details { border-bottom: 1px solid var(--gold-deep); }
+  summary {
+    list-style: none;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: .25rem 1.25rem;
+    align-items: center;
+    padding: 1.5rem 0;
+  }
+  summary::-webkit-details-marker { display: none; }
+  .p-name {
+    font-family: var(--display);
+    font-size: clamp(1.5rem, 4.4vw, 2.6rem);
+    line-height: 1.12;
+    transition: color .25s;
+  }
+  .p-kind { grid-column: 1; color: var(--muted); font-size: .98rem; }
+  .p-icon {
+    grid-column: 2; grid-row: 1 / span 2;
+    width: 2rem; height: 2rem; position: relative; flex: none;
+  }
+  .p-icon::before, .p-icon::after {
+    content: ""; position: absolute; left: 50%; top: 50%;
+    width: 1.1rem; height: 2px; background: var(--gold);
+    transform: translate(-50%, -50%);
+    transition: transform .3s;
+  }
+  .p-icon::after { transform: translate(-50%, -50%) rotate(90deg); }
+  details[open] .p-icon::after { transform: translate(-50%, -50%) rotate(0deg); }
+  summary:hover .p-name, details[open] .p-name { color: var(--gold); }
+
+  .case { padding: 0 0 2.25rem; display: grid; gap: 1.5rem; }
+  @media (min-width: 760px) {
+    .case { grid-template-columns: 1.4fr 1fr; gap: 3rem; }
+  }
+  .case p { max-width: 58ch; }
+  .case p + p { margin-top: .9rem; }
+  .built h3 { font-family: var(--body); font-size: .95rem; font-weight: 600; color: var(--gold); margin-bottom: .6rem; }
+  .built ul { list-style: none; }
+  .built li { padding: .45rem 0; border-top: 1px solid #2a261d; color: var(--bone); font-size: .98rem; }
+  .built li:last-child { border-bottom: 1px solid #2a261d; }
+
+
+  .visit {
+    display: inline-block; margin-top: 1.4rem;
+    color: var(--gold); text-decoration: none; font-weight: 500;
+    border-bottom: 1px solid var(--gold); padding-bottom: 2px;
+  }
+  .visit:hover { color: var(--bone); border-color: var(--bone); }
+
+  /* Services */
+  .do { display: grid; gap: 2.25rem; }
+  @media (min-width: 820px) { .do { grid-template-columns: repeat(3, 1fr); gap: 2.5rem; } }
+  .do div { border-top: 2px solid var(--gold); padding-top: 1.1rem; }
+  .do h3 { font-family: var(--display); font-weight: 500; font-size: 1.45rem; margin-bottom: .55rem; }
+  .do p { color: var(--muted); }
+
+  /* Tools */
+  .tools { color: var(--muted); max-width: 62ch; font-size: 1.05rem; }
+  .tools b { color: var(--bone); font-weight: 500; }
+
+  /* Contact */
+  .contact { background: var(--coal); border-top: 1px solid var(--gold-deep); }
+  .contact h2 { margin-bottom: 1.25rem; }
+  .contact p { color: var(--muted); max-width: 44ch; margin-bottom: 1.75rem; }
+  .links { display: flex; flex-wrap: wrap; gap: .75rem; }
+  .btn {
+    display: inline-block; padding: .85rem 1.4rem;
+    border: 1px solid var(--gold); color: var(--gold);
+    text-decoration: none; font-weight: 500; font-size: 1rem;
+    transition: background .2s, color .2s;
+  }
+  .btn:hover { background: var(--gold); color: var(--black); }
+  .btn.solid { background: var(--gold); color: var(--black); }
+  .btn.solid:hover { background: var(--bone); border-color: var(--bone); }
+
+  footer { padding: 2rem 0 2.5rem; color: var(--muted); font-size: .92rem; background: var(--coal); }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1.5rem; }
+  footer em { font-family: var(--display); color: var(--gold); font-size: 1.05rem; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .hero .rule { animation: none; width: min(320px, 60%); }
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="index.html">Coherent Capital</a>
+    <nav aria-label="Page sections">
+      <a href="index.html">Home</a>
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <h1>Websites, apps and documents that look like the brand behind them.</h1>
+      <div class="rule" aria-hidden="true"></div>
+      <p>I'm <strong>John</strong>, founder of Coherent Capital. I work on my own, so the person you brief is the person who builds it.</p>
+    </div>
+  </div>
+
+  <section id="work" style="padding-top:0">
+    <div class="wrap">
+      <h2>Selected work</h2>
+      <div class="work">
+
+        <details name="work" open>
+          <summary>
+            <span class="p-name">Alex Boulevard</span>
+            <span class="p-kind">Restaurant &amp; bar website</span>
+            <span class="p-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="case">
+            <div>
+              <p>A website for a restaurant and bar that needed to feel like an evening out before anyone booked a table. I took it through several design phases, using reference sites for mood, and kept refining it as the client gave feedback.</p>
+              <p>When the client flagged content errors, I corrected them and re-checked the pages.</p>
+              <a class="visit" href="https://alexboulevard.xo.je/" target="_blank" rel="noopener">Visit the website</a>
+            </div>
+            <div class="built">
+              <h3>What I built</h3>
+              <ul>
+                <li>Cinematic entrance animations</li>
+                <li>Marquee strips and 3D tilt effects</li>
+                <li>Responsive mobile layout</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <details name="work">
+          <summary>
+            <span class="p-name">Joyride Food Deliveries</span>
+            <span class="p-kind">Food-delivery app for Alex Boulevard</span>
+            <span class="p-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="case">
+            <div>
+              <p>A food-delivery app planned in three phases: the customer app, the operational build, then a founder dashboard. Each phase is scoped in its own statement of work, so the client knows what they are getting and when.</p>
+              <p>To show the client how it would work before build, I made a single-file interactive prototype that plays out an order from every side.</p>
+            </div>
+            <div class="built">
+              <h3>What I built</h3>
+              <ul>
+                <li>React / Android app plan across three phases</li>
+                <li>Prototype with customer, staff, kitchen, driver and admin roles</li>
+                <li>Admin dashboard with menu management, stock control and timestamped order tracking</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <details name="work">
+          <summary>
+            <span class="p-name">Diamond Finish</span>
+            <span class="p-kind">Mobile auto detailing website</span>
+            <span class="p-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="case">
+            <div>
+              <p>A single-page site for a mobile car detailing business in South Africa. It walks a visitor from who the business is, through packages, add-ons, travel charges and a subscription programme, to getting in touch.</p>
+              <p>The animation suite was a second pass: sections reveal as you scroll, and package cards slide in and fade out as you move on.</p>
+            </div>
+            <div class="built">
+              <h3>What I built</h3>
+              <ul>
+                <li>Full one-page site, hero to contact</li>
+                <li>Scroll-triggered animations and parallax imagery</li>
+                <li>Promotional pop-up</li>
+                <li>Floating WhatsApp button matched to the logo</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <details name="work">
+          <summary>
+            <span class="p-name">Thanda Music</span>
+            <span class="p-kind">Artist website rebuild</span>
+            <span class="p-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="case">
+            <div>
+              <p>A rebuild of a musician's website, designed so the artist is the first thing you see: the hero photo has no dark filter over it. The site is hosted from a single flat GitHub folder, which keeps updates simple.</p>
+              <p>The old site's best parts came across: performance videos, latest releases with Spotify links, and the full music catalogue.</p>
+              <a class="visit" href="https://thandamusic.xo.je/" target="_blank" rel="noopener">Visit the website</a>
+            </div>
+            <div class="built">
+              <h3>What I built</h3>
+              <ul>
+                <li>Three-page structure: splash, home, media library</li>
+                <li>Video carousel and Spotify release cards</li>
+                <li>WhatsApp, Instagram, TikTok and email links</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <details name="work">
+          <summary>
+            <span class="p-name">Dollar Notes</span>
+            <span class="p-kind">My own forex trading journal</span>
+            <span class="p-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="case">
+            <div>
+              <p>A personal site where I document my trading and market analysis day by day. It is where I practise what I build for others, and it shows that I understand the subject as well as the code.</p>
+              <p>It records USD grid cycle analysis using the institutional terms traders actually use.</p>
+              <a class="visit" href="https://teeseroto-maker.github.io/DollarNotes/index.html" target="_blank" rel="noopener">Visit the website</a>
+            </div>
+            <div class="built">
+              <h3>What I built</h3>
+              <ul>
+                <li>Gold particle animation</li>
+                <li>Live TradingView DXY widget</li>
+                <li>Scrolling ticker</li>
+                <li>Stacking daily journal</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <details name="work">
+          <summary>
+            <span class="p-name">Branded documents</span>
+            <span class="p-kind">Proposals, reports, company profiles and study guides</span>
+            <span class="p-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="case">
+            <div>
+              <p>Documents built in Coherent Capital's black-and-gold house style, so everything a client receives looks like it came from the same hand. That includes a full company profile for Blooming Kidz Gymnastics, client proposal appendices, a trading report on a full-bleed black page, and tutoring guides.</p>
+              <p>I generate them from HTML and CSS or with ReportLab, then check every page as an image before it goes out.</p>
+            </div>
+            <div class="built">
+              <h3>What I built</h3>
+              <ul>
+                <li>Company profile with custom SVG illustrations and logo clean-up</li>
+                <li>Client-facing proposal appendices</li>
+                <li>Monthly trading reports</li>
+                <li>Educational guide suites in a matching house style</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="services" style="padding-top:0">
+    <div class="wrap">
+      <h2>What I can do for you</h2>
+      <div class="do">
+        <div>
+          <h3>Websites and apps</h3>
+          <p>From one-page business sites to phased app builds, designed for phones first and animated with care.</p>
+        </div>
+        <div>
+          <h3>Branded documents</h3>
+          <p>Proposals, profiles and reports that hold one visual identity from the first page to the last.</p>
+        </div>
+        <div>
+          <h3>Trading education</h3>
+          <p>Forex methodology and market analysis, written up clearly enough to learn from.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <h2>Tools I work with</h2>
+      <p class="tools"><b>Web:</b> HTML, CSS, JavaScript, React. <b>Documents:</b> wkhtmltopdf, ReportLab. <b>Images:</b> ImageMagick and PIL. <b>Checking:</b> pdf2image and pdftoppm to review every page before delivery.</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>Let's talk</h2>
+      <p>Tell me what you're building and when you need it.</p>
+      <div class="links">
+        <a class="btn solid" href="mailto:support@coherentcapital.online">support@coherentcapital.online</a>
+        <a class="btn" href="https://wa.me/27670929982">WhatsApp</a>
+        <a class="btn" href="https://teeseroto-maker.github.io/DollarNotes/index.html" target="_blank" rel="noopener">Dollar Notes</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <em>Always Coherent, Always Aligned</em>
+    <span>Coherent Capital</span>
+  </div>
+</footer>
+
+</body>
+</html>
