@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Coherent Capital</title>
+<meta name="description" content="Websites and apps built by Coherent Capital: Alex Boulevard, Joyride Food Deliveries, Thanda Music and Dollar Notes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #000000;
+    --panel: #15130e;
+    --gold: #c9a24b;
+    --gold-soft: #e8d9a8;
+    --muted: #a39a83;
+    --line: rgba(201, 162, 75, 0.35);
+    --display: "Familjen Grotesk", "Helvetica Neue", Arial, sans-serif;
+    --body: "Newsreader", Georgia, "Times New Roman", serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--black);
+    color: var(--gold-soft);
+    font-family: var(--body);
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+  /* Header */
+  .site-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.25rem clamp(1.25rem, 5vw, 4rem);
+    border-bottom: 1px solid var(--line);
+  }
+  .brand { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+  .brand img { width: 44px; height: 44px; object-fit: cover; border-radius: 50%; }
+  .brand span { font-family: var(--display); font-weight: 700; font-size: 1.15rem; color: var(--gold); }
+  nav { display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; font-family: var(--display); font-weight: 500; font-size: 1rem; }
+  nav a { text-decoration: none; color: var(--gold-soft); padding: 0.25rem 0; border-bottom: 2px solid transparent; }
+  nav a:hover { border-bottom-color: var(--gold); }
+  nav a[aria-current="page"] { color: var(--gold); border-bottom-color: var(--gold); }
+
+  /* Intro */
+  .intro { padding: clamp(3rem, 9vw, 7rem) clamp(1.25rem, 5vw, 4rem) clamp(2rem, 5vw, 3.5rem); max-width: 1200px; margin: 0 auto; }
+  .intro h1 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(2.6rem, 8vw, 5.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    color: var(--gold);
+    margin: 0 0 1.5rem;
+    max-width: 14ch;
+  }
+  .intro p { margin: 0; max-width: 52ch; color: var(--gold-soft); }
+
+  /* Projects */
+  .projects {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(1.25rem, 5vw, 4rem) clamp(3rem, 8vw, 6rem);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+    gap: clamp(2rem, 4vw, 3.5rem) clamp(1.5rem, 3vw, 2.5rem);
+  }
+  .project { display: flex; flex-direction: column; gap: 1.1rem; }
+
+  /* Browser frame: the one distinctive element */
+  .frame {
+    display: block;
+    border: 1px solid var(--gold);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--panel);
+    text-decoration: none;
+    transition: box-shadow 0.2s ease;
+  }
+  .frame:hover { box-shadow: 0 0 0 3px rgba(201, 162, 75, 0.25); }
+  .frame-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.55rem 0.8rem;
+    border-bottom: 1px solid var(--line);
+    font-family: var(--display);
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .dots { display: flex; gap: 5px; flex: none; }
+  .dots i { width: 8px; height: 8px; border-radius: 50%; border: 1px solid var(--gold); display: block; }
+  .url { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .shot {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    display: grid;
+    place-items: center;
+    background: var(--panel);
+  }
+  .shot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .shot .mono {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(3rem, 9vw, 5rem);
+    color: var(--gold);
+    opacity: 0.85;
+  }
+
+  .project h2 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(1.5rem, 3vw, 1.9rem);
+    line-height: 1.15;
+    margin: 0;
+    color: var(--gold);
+  }
+  .project .kind { margin: 0; font-family: var(--display); font-size: 0.95rem; color: var(--muted); }
+  .project p.desc { margin: 0; max-width: 46ch; }
+  .visit {
+    align-self: flex-start;
+    font-family: var(--display);
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--black);
+    background: var(--gold);
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+  }
+  .visit:hover { background: var(--gold-soft); }
+
+  /* Closing call to action */
+  .cta {
+    border-top: 1px solid var(--line);
+    padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.25rem, 5vw, 4rem);
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .cta h2 { font-family: var(--display); font-size: clamp(1.6rem, 4vw, 2.4rem); color: var(--gold); margin: 0 0 0.75rem; line-height: 1.15; }
+  .cta p { margin: 0 0 1.5rem; max-width: 50ch; }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 1.5rem clamp(1.25rem, 5vw, 4rem);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.75rem 2rem;
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+  footer a { color: var(--gold-soft); }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .frame { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Coherent Capital home">
+    <img src="Logo.jpg" alt="Coherent Capital logo">
+    <span>Coherent Capital</span>
+  </a>
+  <nav aria-label="Main">
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html" aria-current="page">Portfolio</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="https://teeseroto-maker.github.io/DollarNotes/index.html">Dollar Notes</a>
+  </nav>
+</header>
+
+<main>
+  <section class="intro">
+    <h1>Sites and apps we've built</h1>
+    <p>Four live projects, from a restaurant website to a food-delivery app. Open any of them to see the real thing.</p>
+  </section>
+
+  <section class="projects" aria-label="Projects">
+
+    <article class="project">
+      <a class="frame" href="https://alexboulevard.xo.je/?i=1" target="_blank" rel="noopener" aria-label="Open the Alex Boulevard website">
+        <div class="frame-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="url">alexboulevard.xo.je</span></div>
+        <div class="shot">
+          <span class="mono" aria-hidden="true">AB</span>
+          <img src="alex-boulevard.jpg" alt="Alex Boulevard website home page" loading="lazy" onerror="this.remove()">
+        </div>
+      </a>
+      <h2>Alex Boulevard Restaurant &amp; Bar</h2>
+      <p class="kind">Website for a client</p>
+      <p class="desc">A website for a restaurant and bar in Alexandra, Johannesburg, with its menu and what's on.</p>
+      <a class="visit" href="https://alexboulevard.xo.je/?i=1" target="_blank" rel="noopener">Visit site</a>
+    </article>
+
+    <article class="project">
+      <a class="frame" href="https://joyrideza.xo.je/?i=1" target="_blank" rel="noopener" aria-label="Open the Joyride Freight &amp; Logistics website">
+        <div class="frame-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="url">joyrideza.xo.je</span></div>
+        <div class="shot">
+          <span class="mono" aria-hidden="true">JR</span>
+          <img src="joyride.jpg" alt="Joyride Freight and Logistics website home page" loading="lazy" onerror="this.remove()">
+        </div>
+      </a>
+      <h2>Joyride Freight &amp; Logistics</h2>
+      <p class="kind">Website for a client</p>
+      <p class="desc">A website for a fuel supply and logistics company, covering bulk fuel delivery, storage and energy management.</p>
+      <a class="visit" href="https://joyrideza.xo.je/?i=1" target="_blank" rel="noopener">Visit site</a>
+    </article>
+
+    <article class="project">
+      <a class="frame" href="https://thandamusic.xo.je/?i=1" target="_blank" rel="noopener" aria-label="Open the Thanda Music website">
+        <div class="frame-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="url">thandamusic.xo.je</span></div>
+        <div class="shot">
+          <span class="mono" aria-hidden="true">TM</span>
+          <img src="thanda-music.jpg" alt="Thanda Music website home page" loading="lazy" onerror="this.remove()">
+        </div>
+      </a>
+      <h2>Thanda Music</h2>
+      <p class="kind">Website for an artist</p>
+      <p class="desc">A one-page artist website for the latest music drops, visuals and tour news.</p>
+      <a class="visit" href="https://thandamusic.xo.je/?i=1" target="_blank" rel="noopener">Visit site</a>
+    </article>
+
+    <article class="project">
+      <a class="frame" href="https://dollarnotes.gt.tc/?i=1" target="_blank" rel="noopener" aria-label="Open the Dollar Notes website">
+        <div class="frame-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="url">dollarnotes.gt.tc</span></div>
+        <div class="shot">
+          <span class="mono" aria-hidden="true">DN</span>
+          <img src="dollar-notes.jpg" alt="Dollar Notes website home page" loading="lazy" onerror="this.remove()">
+        </div>
+      </a>
+      <h2>Dollar Notes</h2>
+      <p class="kind">Our own project</p>
+      <p class="desc">Our trading journal and forex market analysis, published for other traders to follow.</p>
+      <a class="visit" href="https://dollarnotes.gt.tc/?i=1" target="_blank" rel="noopener">Visit site</a>
+    </article>
+
+  </section>
+
+  <section class="cta" id="contact">
+    <h2>Need a site or app built?</h2>
+    <p>Tell us what you're building and we'll reply with how we'd approach it.</p>
+    <a class="visit" href="mailto:support@coherentcapital.online">Email us</a>
+  </section>
+</main>
+
+<footer>
+  <span>&copy; 2025 Coherent Capital. All Rights Reserved.</span>
+  <span>
+    <a href="https://www.tiktok.com/@coherentcapital1">TikTok</a> &nbsp;
+    <a href="https://www.instagram.com/johncoherent">Instagram</a> &nbsp;
+    <a href="https://wa.me/27670929982">WhatsApp</a>
+  </span>
+</footer>
+
+</body>
+</html>
